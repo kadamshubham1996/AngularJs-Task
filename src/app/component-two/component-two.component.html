@@ -1,0 +1,170 @@
+<!-- <div class="container">
+<form [formGroup]="service.form" class="normal-form" (submit)="onSubmit()">
+      <input type="hidden" formControlName="$key">
+      <div class="row">
+          <h6>*Required fields</h6>
+          <h5>Symptoms*</h5>
+      <div class="w3-col s4"> 
+       <div class="controles-container">
+          <mat-list role="list">
+              <mat-list-item role="listitem">
+                  <div class="add-bottom-padding">
+                      <mat-checkbox formControlName="isArm_or_leg_weakness">Arm or Leg Weakness</mat-checkbox>
+                    </div>
+              </mat-list-item>
+              <mat-list-item role="listitem">
+                  <div class="add-bottom-padding">
+                      <mat-checkbox formControlName="isConfusion">Confusion</mat-checkbox>
+                    </div>
+              </mat-list-item>
+              <mat-list-item role="listitem">
+                  <div class="add-bottom-padding">
+                      <mat-checkbox formControlName="isDizziness">Dizziness</mat-checkbox>
+                    </div>
+              </mat-list-item>
+              <mat-list-item role="listitem">
+                  <div class="add-bottom-padding">
+                      <mat-checkbox formControlName="isFacial_droop">Facial Droop</mat-checkbox>
+                    </div>
+              </mat-list-item>
+              <mat-list-item role="listitem">
+                  <div class="add-bottom-padding">
+                      <mat-checkbox formControlName="isNumbness_tingling">Numbness Tingling</mat-checkbox>
+                    </div>
+              </mat-list-item>
+            </mat-list>             
+        </div>
+      </div>  
+      <div class="w3-col s4">
+        <div class="controles-container">
+            <mat-list role="list">
+                <mat-list-item role="listitem">
+                    <div class="add-bottom-padding">
+                        <mat-checkbox formControlName="isBalance_problems">Balance Problems</mat-checkbox>
+                      </div>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    <div class="add-bottom-padding">
+                        <mat-checkbox formControlName="isHeadache">Headache</mat-checkbox>
+                      </div>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    <div class="add-bottom-padding">
+                        <mat-checkbox formControlName="isSpeech_difficulties">Speech Difficulties</mat-checkbox>
+                      </div>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    <div class="add-bottom-padding">
+                        <mat-checkbox formControlName="isVision_changes">Vision Changes</mat-checkbox>
+                      </div>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    <div class="add-bottom-padding">
+                        <mat-checkbox formControlName="isRight_sided_flaccid_weakness">Right Sided Flaccid weakness</mat-checkbox>
+                      </div>
+                </mat-list-item>
+              </mat-list>          
+        </div>
+      </div>
+      <div class="w3-col s4">
+          <div class="controles-container">
+              <mat-list role="list">
+                <mat-list-item role="listitem">
+                    <div >
+                        <mat-checkbox formControlName="isLeft_sided_flaccid_weakness">Left Sided Flaccid Weakness</mat-checkbox>
+                      </div>
+                </mat-list-item>
+                <mat-list-item role="listitem"></mat-list-item>
+                <mat-list-item role="listitem"><mat-form-field>
+                    <input formControlName="other" matInput placeholder="Other" >
+                    <mat-error>This field is mandatory.</mat-error>
+                  </mat-form-field>
+                </mat-list-item>
+              </mat-list>  
+               
+          </div>
+        </div>
+      </div>
+      <div class="button-row">
+        <button mat-raised-button color="primary" type="submit" [disabled]="service.form.invalid">Submit</button>
+        <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+      </div>
+  </form>
+</div> -->
+<div class="container">
+    <form [formGroup]="service.form" class="normal-form" (submit)="onsubmit()">
+        <mat-grid-list cols="3" rowHeight="300px">
+                <h6>*Required fields</h6>
+                <h5>Symptoms*</h5>
+          <mat-grid-tile>
+            <div class="controles-container">
+              <input type="hidden" formControlName="$key">
+
+              <div class="add-bottom-padding">
+                <mat-checkbox formControlName="isArm_or_leg_weakness">Arm or Leg Weakness</mat-checkbox>
+              </div>
+              <div class="add-bottom-padding">
+                <mat-checkbox formControlName="isConfusion">Confusion</mat-checkbox>
+              </div>
+              <div class="add-bottom-padding">
+                <mat-checkbox formControlName="isDizziness">Dizziness</mat-checkbox>
+              </div>
+              <div class="add-bottom-padding">
+                <mat-checkbox formControlName="isFacial_droop">Facial Droop</mat-checkbox>
+              </div>
+              <div class="add-bottom-padding">
+                <mat-checkbox formControlName="isNumbness_tingling">Numbness Tingling</mat-checkbox>
+              </div>
+            </div>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <div class="controles-container">
+                 <div class="add-bottom-padding">
+                    <mat-checkbox formControlName="isBalance_problems">Balance Problems</mat-checkbox>
+                  </div>
+                  <div class="add-bottom-padding">
+                    <mat-checkbox formControlName="isHeadache">Headache</mat-checkbox>
+                  </div>
+                  <div class="add-bottom-padding">
+                    <mat-checkbox formControlName="isSpeech_difficulties">Speech Difficulties</mat-checkbox>
+                  </div>
+                  <div class="add-bottom-padding">
+                    <mat-checkbox formControlName="isVision_changes">Vision Changes</mat-checkbox>
+                  </div>
+                  <div class="add-bottom-padding">
+                    <mat-checkbox formControlName="isRight_sided_flaccid_weakness">Right Sided Flaccid weakness</mat-checkbox>
+                  </div>
+             
+            </div>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <div class="controles-container " >
+                <div class="add-bottom-padding">
+                    <mat-checkbox formControlName="isLeft_sided_flaccid_weakness">Left Sided Flaccid Weakness</mat-checkbox>
+                  </div>
+                  <mat-form-field>
+                      <input formControlName="other" matInput placeholder="Other" >
+                      <mat-error>This field is mandatory.</mat-error>
+                    </mat-form-field>
+                  <div class="add-bottom-padding">
+                      <!-- <input type="hidden"> -->
+
+                    </div>
+                    <div class="add-bottom-padding">
+                        <!-- <input type="hidden" > -->
+                      </div>
+                      <div class="add-bottom-padding">
+                          <input type="hidden" >
+                        </div>
+                        <div class="add-bottom-padding">
+                            <!-- <input type="hidden" > -->
+                          </div>
+            </div>
+          </mat-grid-tile>
+        </mat-grid-list>
+        <div class="button-row" align="center">
+            <button mat-raised-button color="primary" type="submit" [disabled]="service.form.invalid">Submit</button>
+            <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+          </div>
+      </form>
+</div>

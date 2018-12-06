@@ -1,0 +1,318 @@
+<!-- <div class="container">
+
+<form [formGroup]="service.form" class="normal-form">
+  <label>*Required field</label>
+  <div class="row">
+    <div class="w3-col s7">
+        <div class="controles-container">
+            <input type="hidden" formControlName="$key">
+            <mat-list role="list">
+              <mat-list-item>Arrival to ED*</mat-list-item>
+                <div class="row">
+                        <div class="w3-col s6">
+                                <mat-list-item role="listitem">
+                                    <mat-form-field>
+                                        <input formControlName="Today1" matInput placeholder="Email">
+                                        <mat-icon class="pull-right">date_range</mat-icon>
+                                        <mat-error>Invalid email address.</mat-error>
+                                      </mat-form-field>
+                                </mat-list-item>
+                            </div>
+                    <div class="w3-col s6">
+                        <mat-list-item role="listitem">
+                            <mat-form-field>
+                                <input formControlName="Today1" matInput placeholder="Today">
+                                <mat-icon class="pull-right">query_builder</mat-icon>
+                                <mat-error>Invalid email address.</mat-error>
+                              </mat-form-field>
+                        </mat-list-item>
+                    </div>
+                </div>
+                <div class="row w3-col s12">
+                    <mat-list-item>Last Known Normal*</mat-list-item>
+                </div>
+                <div class="row">
+                    <div class="w3-col s6">
+                        <mat-list-item role="listitem">
+                            <mat-form-field>
+                                <input formControlName="Today1" matInput placeholder="Email">
+                                <mat-icon class="pull-right">date_range</mat-icon>
+                                <mat-error>Invalid email address.</mat-error>
+                              </mat-form-field>
+                        </mat-list-item>
+                    </div>
+                    <div class="w3-col s6">
+                        <mat-list-item role="listitem">
+                            <mat-form-field>
+                                <input formControlName="Today1" matInput placeholder="Email">
+                                <mat-icon class="pull-right">query_builder</mat-icon>
+                                <mat-error>Invalid email address.</mat-error>
+                              </mat-form-field>
+                        </mat-list-item>
+                    </div>
+                    </div>
+                    <div class="w3-col s12">
+                        <mat-list-item role="listitem"> 
+                            <div class="add-bottom-padding">
+                              <mat-checkbox formControlName="isUnknown">Unknown</mat-checkbox>
+                            </div>
+                          </mat-list-item>
+                    </div>
+                    <div class="w3-col s12">
+                        <mat-list-item role="listitem">
+                            <mat-form-field>
+                                <mat-select formControlName="family_at_bedside" placeholder="Family at Bedside*">
+                                  <mat-option>None</mat-option>
+                                  <ng-container *ngFor="let department of departments">
+                                    <mat-option value="{{department.id}}">{{department.value}}</mat-option>
+                                  </ng-container>
+                                </mat-select>
+                              </mat-form-field>
+                        </mat-list-item>
+                    </div>
+              </mat-list>
+              
+          </div>
+    </div>
+    <div class="w3-col s5" >
+        <div class="controles-container">
+            <mat-list role="list">
+                <mat-list-item role="listitem">Mi in previous 3 weeks?*</mat-list-item>
+                <mat-list-item role="listitem">
+                    <div class="add-bottom-padding">
+                        <mat-radio-group formControlName="mi_in_previous_weeks">
+                          <mat-radio-button value="1">No</mat-radio-button>
+                          <mat-radio-button value="2">Yes</mat-radio-button>
+                          <mat-radio-button value="3">Unknown</mat-radio-button>
+                        </mat-radio-group>
+                      </div>
+                </mat-list-item>
+                <mat-list-item role="listitem">Stroke in previous 3 months?*</mat-list-item>
+                <mat-list-item role="listitem">
+                    <div class="add-bottom-padding">
+                        <mat-radio-group formControlName="stroke_in_previous_months">
+                          <mat-radio-button value="1">No</mat-radio-button>
+                          <mat-radio-button value="2">Yes</mat-radio-button>
+                          <mat-radio-button value="3">Unknown</mat-radio-button>
+                        </mat-radio-group>
+                      </div>
+                </mat-list-item>
+                <mat-list-item role="listitem">History of ICH?*</mat-list-item>
+                <mat-list-item role="listitem">
+                    <div class="add-bottom-padding">
+                        <mat-radio-group formControlName="history_of_ich">
+                          <mat-radio-button value="1">No</mat-radio-button>
+                          <mat-radio-button value="2">Yes</mat-radio-button>
+                          <mat-radio-button value="3">Unknown</mat-radio-button>
+                        </mat-radio-group>
+                      </div>
+                </mat-list-item>
+                <mat-list-item role="listitem">Took Coumadin,Eliquis,Pradaxa<br/> or Xarelto in less then 48 hours*</mat-list-item>
+                <mat-list-item role="listitem">
+                    <div class="add-bottom-padding">
+                        <mat-radio-group formControlName="Coumadian_eliquis_pradaxa">
+                          <mat-radio-button value="1">No</mat-radio-button>
+                          <mat-radio-button value="2">Yes</mat-radio-button>
+                          <mat-radio-button value="3">Unknown</mat-radio-button>
+                        </mat-radio-group>
+                      </div>
+                </mat-list-item>
+                <mat-list-item role="listitem">History of Neoplasm?*</mat-list-item>
+                <mat-list-item role="listitem">
+                    <div class="add-bottom-padding">
+                        <mat-radio-group formControlName="history_of_Neoplasm">
+                          <mat-radio-button value="1">No</mat-radio-button>
+                          <mat-radio-button value="2">Yes</mat-radio-button>
+                          <mat-radio-button value="3">Unknown</mat-radio-button>
+                        </mat-radio-group>
+                      </div>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    <div class="add-bottom-padding row">
+                        <div cols="2">
+                          
+                            <mat-radio-group formControlName="was_this_interacronal">
+                                <h5>Was this intracronial?*</h5>
+                                <mat-radio-button value="1">No</mat-radio-button>
+                                <mat-radio-button value="2">Yes</mat-radio-button>
+                              </mat-radio-group>
+                        </div>
+                        </div>
+                </mat-list-item>
+
+              </mat-list>
+              
+            
+           
+             
+               
+                  
+                    
+                      
+          
+            <div class="button-row">
+              <button mat-raised-button color="primary" type="submit" [disabled]="service.form.invalid">Submit</button>
+              <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+            </div> 
+
+          </div>
+    </div>
+  </div>
+    
+  </form>
+</div>  -->
+<div class="container" style="margin-right:0px;">
+        <form [formGroup]="service.form" class="normal-form" (submit)="onsubmit()">
+                <label>*Required field</label>
+                <mat-grid-list cols="2" rowHeight="520px">
+                  <mat-grid-tile>
+                    <div class="controles-container" >
+                      <input type="hidden" formControlName="$key">
+                      <mat-list role="list">
+                            <mat-list-item role="listitem"><label >Arrival to ED*</label></mat-list-item>
+                            <mat-list-item role="listitem">
+                              
+                                    <div class="row add-bottom-padding">
+                        
+                                            <div class="w3-col s6 controles-container ">
+                                                  <mat-form-field>
+                                                          <input formControlName="Today1" matInput placeholder="Today">
+                                                          <mat-icon matSuffix>date_range</mat-icon>
+                                                          <mat-error>Invalid Date.</mat-error>
+                                                        </mat-form-field>
+                                            </div>
+                                            <div class="w3-col s6  controles-container ">
+                                                  <mat-form-field>
+                                                          <input formControlName="Today2" matInput placeholder="2300">
+                                                          <mat-icon matSuffix>query_builder</mat-icon>
+                                                          <mat-error>Invalid Time.</mat-error>
+                                                  </mat-form-field>
+                                            </div>
+                                        </div>
+                            </mat-list-item>
+                            <mat-list-item role="listitem"><label>Last Known Normal*</label></mat-list-item>
+                            <mat-list-item role="listitem">
+                                    <div class="row">
+                                            <div class="w3-col s6 controles-container">
+                                                  <mat-form-field>
+                                                          <input formControlName="Today3" matInput placeholder="Today">
+                                                           <mat-icon  matSuffix>date_range</mat-icon>
+                                                           <mat-error>Invalid Date.</mat-error>
+                                                        </mat-form-field>
+                                            </div>
+                                            <div class="w3-col s6 controles-container">
+                                                  <mat-form-field>
+                                                          <input formControlName="Today4" matInput placeholder="2300">
+                                                          <mat-icon matSuffix>query_builder</mat-icon>
+                                                          <mat-error>Invalid Time.</mat-error>
+                                                        </mat-form-field>
+                                            </div>
+                                        </div>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                                    <div class="add-bottom-padding">
+                                            <mat-checkbox formControlName="isUnknown">Unknown</mat-checkbox>
+                                    </div>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                                    <mat-form-field>
+                                            <mat-select formControlName="family_at_bedside" placeholder="Family at Bedside*">
+                                              <mat-option>None</mat-option>
+                                              <ng-container *ngFor="let department of departments">
+                                                <mat-option value="{{department.id}}">{{department.value}}</mat-option>
+                                              </ng-container>
+                                            </mat-select>
+                                          </mat-form-field>
+                            </mat-list-item>
+                          <mat-list-item></mat-list-item>
+                          <mat-list-item></mat-list-item>
+                          <mat-list-item></mat-list-item>
+                          <mat-list-item></mat-list-item>
+                          <mat-list-item></mat-list-item>
+                          </mat-list>
+                    </div>
+                  </mat-grid-tile>
+                  <mat-grid-tile >
+                    <div class="controles-container ">
+                            <mat-list role="list " >
+                              <div class="list_radio s " >
+                                  <label>Mi in previous 3 weeks?*</label>
+                                  <mat-list-item role="listitem">
+                                          <div class="add-bottom-padding">
+                                                  <mat-radio-group formControlName="mi_in_previous_weeks">
+                                                    <mat-radio-button value="1">No</mat-radio-button>
+                                                    <mat-radio-button value="2">Yes</mat-radio-button>
+                                                    <mat-radio-button value="3">Unknown</mat-radio-button>
+                                                  </mat-radio-group>
+                                                </div>
+                                  </mat-list-item>
+                              </div>
+                              <div class="list_radio ">
+                                  <label>Stroke in previous 3 months?*</label>
+                                  <mat-list-item role="listitem">
+                                          <div class="add-bottom-padding">
+                                                  <mat-radio-group formControlName="stroke_in_previous_months">
+                                                    <mat-radio-button value="1">No</mat-radio-button>
+                                                    <mat-radio-button value="2">Yes</mat-radio-button>
+                                                    <mat-radio-button value="3">Unknown</mat-radio-button>
+                                                  </mat-radio-group>
+                                                </div>
+                                  </mat-list-item>
+                              </div>      
+                                <div class="list_radio">
+                                    <label>History of ICH?*</label>
+                                    <mat-list-item role="listitem">
+                                            <div class="add-bottom-padding">
+                                                    <mat-radio-group formControlName="history_of_ich">
+                                                      <mat-radio-button value="1">No</mat-radio-button>
+                                                      <mat-radio-button value="2">Yes</mat-radio-button>
+                                                      <mat-radio-button value="3">Unknown</mat-radio-button>
+                                                    </mat-radio-group>
+                                                  </div>
+                                    </mat-list-item>
+                                </div>
+                                <div class="list_radio">
+                                    <label>Took Coumadin,Eliquis,Pradaxa or<br/> Xarelto in less then 48 hours*</label>
+                                    <mat-list-item role="listitem">
+                                            <div class="add-bottom-padding">
+                                                    <mat-radio-group formControlName="Coumadian_eliquis_pradaxa">
+                                                      <mat-radio-button value="1">No</mat-radio-button>
+                                                      <mat-radio-button value="2">Yes</mat-radio-button>
+                                                      <mat-radio-button value="3">Unknown</mat-radio-button>
+                                                    </mat-radio-group>
+                                                  </div>
+                                    </mat-list-item>
+                                </div>
+                                <div class="list_radio">
+                                    <label>History of Neoplasm?*</label>
+                                    <mat-list-item role="listitem">
+                                            <div class="add-bottom-padding">
+                                                    <mat-radio-group formControlName="history_of_Neoplasm">
+                                                      <mat-radio-button value="1">No</mat-radio-button>
+                                                      <mat-radio-button value="2">Yes</mat-radio-button>
+                                                      <mat-radio-button value="3">Unknown</mat-radio-button>
+                                                    </mat-radio-group>
+                                                  </div>
+                                    </mat-list-item>
+                                </div>
+                                <div class="list_radio">
+                                    <mat-list-item role="listitem"> 
+                                        <label>Was this intracronial?*</label>
+                                    <div class="add-bottom-padding">
+                                        <mat-radio-group formControlName="was_this_interacronal">
+                                          <mat-radio-button value="1">No</mat-radio-button>
+                                          <mat-radio-button value="2">Yes</mat-radio-button>
+                                        </mat-radio-group>
+                                      </div></mat-list-item>
+                                </div>        
+                               </mat-list>                
+                    </div>
+                  </mat-grid-tile>
+
+                </mat-grid-list>
+                <div class="button-row" align="center">
+                        <button mat-raised-button color="primary" type="submit" [disabled]="service.form.invalid">Submit</button>
+                        <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+                      </div>
+              </form>
+    </div>

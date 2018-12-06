@@ -1,0 +1,33 @@
+.vertical-menu {
+    margin-left: 0px;
+    padding-left: 0px;
+    border: solid #ff6600;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-right: none;
+}
+
+.vertical-menu a {
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #00ccff;
+}
+
+.vertical-menu a.active {
+    background-color: #00ccff;
+    color: white;
+}
+mat-icon{
+    color:white;
+}
+.check_circle{
+    display: none;
+}
+.display_arrow{
+    display: none;
+}

@@ -1,0 +1,15 @@
+.container{
+   
+    margin-left: 0px;
+    padding-left: 0px;
+    border: solid #00ccff;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 400px;
+}
+.add-bottom-padding{
+    padding-top: 15px;
+}
+h5 ,h6 {
+    padding-left: 30px;
+}
